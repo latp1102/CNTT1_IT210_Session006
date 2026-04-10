@@ -21,7 +21,7 @@
             </div>
             <div>
                 <span>Giá:</span>
-<!--                <span th:text="${#numbers.formatDecimal(book.price, 0, 'COMMA', 0, 'POINT')} + ' VNÐ'">100,000 VNÐ</span>-->
+                <span th:text="${book.price}">VNĐ</span>
             </div>
         </div>
         <div th:if="${book == null}" >
