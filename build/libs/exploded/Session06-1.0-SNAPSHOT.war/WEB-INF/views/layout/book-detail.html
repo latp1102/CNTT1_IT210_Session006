@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Book Detail</title>
+</head>
+<body>
+    <div>
+        <div th:if="${book != null}">
+            <div class="field">
+                <span >ID:</span>
+                <span th:text="${book.id}">1</span>
+            </div>
+            <div>
+                <span >Tên sách:</span>
+                <span th:text="${book.name}">Tên sách</span>
+            </div>
+            <div>
+                <span >Tác giá:</span>
+                <span th:text="${book.author}">Tác giá</span>
+            </div>
+            <div>
+                <span>Giá:</span>
+<!--                <span th:text="${#numbers.formatDecimal(book.price, 0, 'COMMA', 0, 'POINT')} + ' VNÐ'">100,000 VNÐ</span>-->
+            </div>
+        </div>
+        <div th:if="${book == null}" >
+            Không tìm tháy sách nào!
+        </div>
+        <div>
+            <a href="/books">Quay lãi danh sách sách</a>
+        </div>
+    </div>
+</body>
+</html>
